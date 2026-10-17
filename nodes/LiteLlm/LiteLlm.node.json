@@ -1,17 +1,17 @@
 {
-	"node": "n8n-nodes-litellm",
+	"node": "n8n-nodes-litellm-budget",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Development", "Utility"],
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm#credentials"
+				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm-budget#credentials"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm"
+				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm-budget"
 			}
 		]
 	},

@@ -17,7 +17,7 @@
 				"options": { "safetyMargin": 1 }
 			},
 			"name": "Check budget",
-			"type": "n8n-nodes-litellm.liteLlm",
+			"type": "n8n-nodes-litellm-budget.liteLlm",
 			"typeVersion": 1,
 			"position": [220, 0]
 		},
@@ -32,7 +32,7 @@
 				"options": {}
 			},
 			"name": "Message a model",
-			"type": "n8n-nodes-litellm.liteLlm",
+			"type": "n8n-nodes-litellm-budget.liteLlm",
 			"typeVersion": 1,
 			"position": [440, 0]
 		}

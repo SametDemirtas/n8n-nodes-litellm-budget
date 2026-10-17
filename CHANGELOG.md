@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.2.0 (2026-10-17)
+## 0.1.0 (2026-10-17)
 
-First release. Versions 0.1.x of this npm name were published and withdrawn by an earlier, unrelated package, and npm does not allow reusing them.
+First release.
 
 - Chat → Message a Model with the model list from the proxy, optional system prompt, temperature and max tokens, simplified output
 - Model → Get Many with Return All / Limit

@@ -21,7 +21,7 @@ function context(params, { continueOnFail = false, itemIndex = 0 } = {}) {
 		getNodeParameter: (name, fallback) => params[name] ?? fallback,
 		getNode: () => ({
 			name: 'LiteLLM',
-			type: 'n8n-nodes-litellm.liteLlm',
+			type: 'n8n-nodes-litellm-budget.liteLlm',
 			typeVersion: 1,
 			parameters: {},
 		}),

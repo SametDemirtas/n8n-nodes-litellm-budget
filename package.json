@@ -1,11 +1,11 @@
 {
-	"name": "n8n-nodes-litellm",
-	"version": "0.2.0",
+	"name": "n8n-nodes-litellm-budget",
+	"version": "0.1.0",
 	"description": "n8n community node for the LiteLLM proxy API: chat completions, models, spend and budget checks before a workflow calls a model",
 	"license": "MIT",
-	"homepage": "https://github.com/SametDemirtas/n8n-nodes-litellm#readme",
+	"homepage": "https://github.com/SametDemirtas/n8n-nodes-litellm-budget#readme",
 	"bugs": {
-		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm/issues"
+		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm-budget/issues"
 	},
 	"keywords": [
 		"n8n-community-node-package",
@@ -24,7 +24,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm.git"
+		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm-budget.git"
 	},
 	"engines": {
 		"node": ">=22"

@@ -3,7 +3,7 @@
 #
 # npm authentication, one of:
 #   A) Trusted Publishing (OIDC): on npmjs.com, package settings → Trusted Publishers →
-#      GitHub Actions, owner SametDemirtas, repository n8n-nodes-litellm, workflow publish.yml.
+#      GitHub Actions, owner SametDemirtas, repository n8n-nodes-litellm-budget, workflow publish.yml.
 #      Leave the NPM_TOKEN secret unset.
 #   B) npm granular access token with publish rights, saved as the NPM_TOKEN repository secret.
 # npm only allows a Trusted Publisher on a package that already exists, so the first release

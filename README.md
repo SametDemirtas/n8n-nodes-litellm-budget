@@ -1,4 +1,4 @@
-# n8n-nodes-litellm
+# n8n-nodes-litellm-budget
 
 An [n8n](https://n8n.io) community node for the [LiteLLM](https://docs.litellm.ai/) proxy API.
 
@@ -8,7 +8,7 @@ For plain chat you can also point n8n's OpenAI nodes at the proxy. This node add
 
 ## Installation
 
-On self-hosted n8n, go to **Settings → Community Nodes → Install** and enter `n8n-nodes-litellm`. See the [community nodes installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) for details. On n8n Cloud, community nodes are available once n8n has verified them.
+On self-hosted n8n, go to **Settings → Community Nodes → Install** and enter `n8n-nodes-litellm-budget`. See the [community nodes installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) for details. On n8n Cloud, community nodes are available once n8n has verified them.
 
 ## Credentials
 
