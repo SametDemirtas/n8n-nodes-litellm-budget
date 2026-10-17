@@ -9,7 +9,7 @@ export class LiteLlm implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'LiteLLM',
 		name: 'liteLlm',
-		icon: 'file:../../icons/litellm.svg',
+		icon: { light: 'file:../../icons/litellm.svg', dark: 'file:../../icons/litellm.dark.svg' },
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

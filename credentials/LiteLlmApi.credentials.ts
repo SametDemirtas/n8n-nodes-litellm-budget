@@ -17,7 +17,10 @@ export class LiteLlmApi implements ICredentialType {
 
 	displayName = 'LiteLLM API';
 
-	icon = 'file:../icons/litellm.svg' as const;
+	icon = {
+		light: 'file:../icons/litellm.svg',
+		dark: 'file:../icons/litellm.dark.svg',
+	} as const;
 
 	documentationUrl = 'https://docs.litellm.ai/docs/proxy/virtual_keys';
 

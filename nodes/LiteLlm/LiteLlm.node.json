@@ -2,7 +2,7 @@
 	"node": "n8n-nodes-litellm",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["AI", "Development"],
+	"categories": ["Development", "Utility"],
 	"resources": {
 		"credentialDocumentation": [
 			{

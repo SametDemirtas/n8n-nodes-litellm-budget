@@ -10,7 +10,7 @@ updates:
       minor-and-patch:
         update-types: ['minor', 'patch']
     ignore:
-      # @n8n/node-cli pins eslint as an exact peer; move eslint only together with node-cli.
+      # @n8n/node-cli is built against eslint 9.29.0; move eslint only together with node-cli.
       - dependency-name: 'eslint'
 
   - package-ecosystem: 'github-actions'
