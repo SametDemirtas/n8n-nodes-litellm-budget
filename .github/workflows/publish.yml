@@ -1,0 +1,64 @@
+# Publishes the package to npm with provenance when a version tag is pushed.
+# n8n requires verified community nodes to be published this way since May 1 2026.
+#
+# npm authentication, one of:
+#   A) Trusted Publishing (OIDC): on npmjs.com, package settings → Trusted Publishers →
+#      GitHub Actions, owner SametDemirtas, repository n8n-nodes-litellm, workflow publish.yml.
+#      Leave the NPM_TOKEN secret unset.
+#   B) npm granular access token with publish rights, saved as the NPM_TOKEN repository secret.
+# npm only allows a Trusted Publisher on a package that already exists, so the first release
+# uses B. Afterwards switch to A, delete the secret and revoke the token.
+#
+# Releasing:
+#   First release: push main, then tag the version in package.json
+#     git tag X.Y.Z && git push origin X.Y.Z
+#   Later releases: run `npm run release` locally on a clean main. It lints, builds, asks for the
+#   version bump, rewrites CHANGELOG.md from the commit messages, commits, tags and pushes; the
+#   tag push runs this workflow. Fix CHANGELOG.md in a follow-up commit if needed.
+
+name: Publish
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check tag matches package version
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "$GITHUB_REF_NAME" != "$version" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match package.json version $version"
+            exit 1
+          fi
+
+      - name: Test
+        run: npm test
+
+      - name: Release
+        run: |
+          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          npm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

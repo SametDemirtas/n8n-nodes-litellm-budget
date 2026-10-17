@@ -1,0 +1,68 @@
+{
+	"name": "n8n-nodes-litellm",
+	"version": "0.2.0",
+	"description": "n8n community node for the LiteLLM proxy API: chat completions, models, spend and budget checks before a workflow calls a model",
+	"license": "MIT",
+	"homepage": "https://github.com/SametDemirtas/n8n-nodes-litellm#readme",
+	"bugs": {
+		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm/issues"
+	},
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"litellm",
+		"llm",
+		"llm-proxy",
+		"openai-compatible",
+		"ai-gateway",
+		"budget",
+		"spend-tracking"
+	],
+	"author": {
+		"name": "Samet Demirtas",
+		"email": "demirtassamet10@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SametDemirtas/n8n-nodes-litellm.git"
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease",
+		"test": "npm run build && node --test 'test/*.test.mjs'",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
+	},
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo",
+		"!dist/**/*.map"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/LiteLlmApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/LiteLlm/LiteLlm.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.33.1",
+		"eslint": "9.29.0",
+		"prettier": "3.8.3",
+		"release-it": "20.2.0",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

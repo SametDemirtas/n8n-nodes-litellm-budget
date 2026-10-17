@@ -1,0 +1,19 @@
+{
+	"node": "n8n-nodes-litellm",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["AI", "Development"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/SametDemirtas/n8n-nodes-litellm"
+			}
+		]
+	},
+	"alias": ["LLM", "LiteLLM proxy", "OpenAI compatible", "AI gateway", "Spend", "Budget"]
+}
